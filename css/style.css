@@ -76,6 +76,21 @@ section { margin-top: 44px; }
 
 .widgets { display: grid; gap: 12px; margin-bottom: 14px; }
 #fx-widget { font-size: 15px; background: #fff9e9; border: 1px solid var(--gold); border-radius: 12px; padding: 12px 14px; }
+.fx-title { color: var(--sea); font-weight: 700; margin-bottom: 8px; }
+.fx-calc { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 8px; margin-bottom: 8px; }
+.fx-calc label { display: grid; gap: 4px; color: var(--muted); font-size: 12px; font-weight: 700; }
+.fx-calc input {
+  width: 100%;
+  min-width: 0;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+.fx-calc input:focus { outline: 2px solid rgba(11,111,121,.18); border-color: var(--sea); }
+.fx-summary { color: var(--ink); font-size: 15px; font-weight: 700; margin-top: 4px; }
 .fx-samples { display: block; font-size: 13px; color: var(--muted); }
 #weather-widget { background: #eef7f8; border: 1px solid #cfe4e7; border-radius: 12px; padding: 12px 14px; font-size: 14px; }
 .wx-now { margin-bottom: 8px; }

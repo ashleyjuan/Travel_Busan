@@ -150,12 +150,65 @@
   function loadFx() {
     var el = document.getElementById('fx-widget');
     if (!el) return;
+    var fallbackRate = 0.0235;
+    var els = {};
+
+    function money(value, currency) {
+      return new Intl.NumberFormat('zh-TW', {
+        style: 'currency',
+        currency: currency,
+        maximumFractionDigits: currency === 'KRW' ? 0 : 0
+      }).format(value || 0);
+    }
+
+    function updateFromKrw() {
+      var krw = Number(els.krw.value) || 0;
+      var rate = Number(els.rate.value) || fallbackRate;
+      els.twd.value = Math.round(krw * rate);
+      els.summary.textContent = money(krw, 'KRW') + ' 約 ' + money(krw * rate, 'TWD');
+    }
+
+    function updateFromTwd() {
+      var twd = Number(els.twd.value) || 0;
+      var rate = Number(els.rate.value) || fallbackRate;
+      var krw = rate ? Math.round(twd / rate) : 0;
+      els.krw.value = krw;
+      els.summary.textContent = money(krw, 'KRW') + ' 約 ' + money(twd, 'TWD');
+    }
+
+    function setRate(rate, label) {
+      els.rate.value = rate.toFixed(5);
+      els.rateLabel.textContent = label + '：₩1,000 約 NT$' + (rate * 1000).toFixed(1);
+      updateFromKrw();
+    }
+
+    el.innerHTML =
+      '<div class="fx-title">匯率計算器</div>' +
+      '<div class="fx-calc" aria-label="韓元台幣匯率計算器">' +
+        '<label>韓元 KRW<input id="fx-krw" type="number" inputmode="decimal" min="0" step="1000" value="10000"></label>' +
+        '<label>台幣 TWD<input id="fx-twd" type="number" inputmode="decimal" min="0" step="10"></label>' +
+        '<label>匯率<input id="fx-rate" type="number" inputmode="decimal" min="0" step="0.0001"></label>' +
+      '</div>' +
+      '<div class="fx-summary" id="fx-summary"></div>' +
+      '<span class="fx-samples" id="fx-rate-label">估算匯率載入中...</span>';
+
+    els.krw = document.getElementById('fx-krw');
+    els.twd = document.getElementById('fx-twd');
+    els.rate = document.getElementById('fx-rate');
+    els.summary = document.getElementById('fx-summary');
+    els.rateLabel = document.getElementById('fx-rate-label');
+
+    els.krw.addEventListener('input', updateFromKrw);
+    els.twd.addEventListener('input', updateFromTwd);
+    els.rate.addEventListener('input', updateFromKrw);
+    setRate(fallbackRate, '估算匯率');
+
     fetch('https://open.er-api.com/v6/latest/KRW').then(function (r) { return r.json(); }).then(function (data) {
       if (!data.rates || !data.rates.TWD) throw new Error('no rate');
-      var rate = data.rates.TWD;
-      el.innerHTML = '即時匯率：<strong>₩1,000 約 NT$' + (rate * 1000).toFixed(1) + '</strong>' +
-        '<span class="fx-samples">₩10,000 約 NT$' + (rate * 10000).toFixed(0) + '・₩50,000 約 NT$' + (rate * 50000).toFixed(0) + '</span>';
-    }).catch(function () { el.innerHTML = '匯率小工具暫時無法載入，抓 ₩1,000 約 NT$23–25 估算。'; });
+      setRate(data.rates.TWD, '即時匯率');
+    }).catch(function () {
+      els.rateLabel.textContent = '匯率暫時無法自動更新，可手動調整；目前用 ₩1,000 約 NT$23.5 估算。';
+    });
   }
 
   document.addEventListener('DOMContentLoaded', function () {
