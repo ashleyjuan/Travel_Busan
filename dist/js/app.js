@@ -273,15 +273,20 @@
       });
     });
 
-    var toggle = document.getElementById('packing-toggle');
-    var body = document.getElementById('packing-body');
-    if (toggle && body) {
-      toggle.addEventListener('click', function () {
-        var hidden = body.style.display === 'none';
-        body.style.display = hidden ? '' : 'none';
-        toggle.textContent = hidden ? '收合' : '展開';
-      });
-    }
+    setupSectionToggle('packing-toggle', 'packing-body');
+    setupSectionToggle('booking-toggle', 'booking-body');
+    setupSectionToggle('prep-toggle', 'prep-body');
+  }
+
+  function setupSectionToggle(toggleId, bodyId) {
+    var toggle = document.getElementById(toggleId);
+    var body = document.getElementById(bodyId);
+    if (!toggle || !body) return;
+    toggle.addEventListener('click', function () {
+      var hidden = body.style.display === 'none';
+      body.style.display = hidden ? '' : 'none';
+      toggle.textContent = hidden ? '收合' : '展開';
+    });
   }
 
   function loadWeather() {
@@ -318,11 +323,17 @@
       }).format(value || 0);
     }
 
+    function renderSummary(krw, twd) {
+      els.summary.innerHTML = '<strong>' + money(krw, 'KRW') + '</strong>' +
+        '<span class="fx-eq">\u2248</span>' +
+        '<strong>' + money(twd, 'TWD') + '</strong>';
+    }
+
     function updateFromKrw() {
       var krw = Number(els.krw.value) || 0;
       var rate = Number(els.rate.value) || fallbackRate;
       els.twd.value = Math.round(krw * rate);
-      els.summary.textContent = money(krw, 'KRW') + ' 約 ' + money(krw * rate, 'TWD');
+      renderSummary(krw, krw * rate);
     }
 
     function updateFromTwd() {
@@ -330,24 +341,36 @@
       var rate = Number(els.rate.value) || fallbackRate;
       var krw = rate ? Math.round(twd / rate) : 0;
       els.krw.value = krw;
-      els.summary.textContent = money(krw, 'KRW') + ' 約 ' + money(twd, 'TWD');
+      renderSummary(krw, twd);
     }
 
     function setRate(rate, label) {
       els.rate.value = rate.toFixed(5);
-      els.rateLabel.textContent = label + '：₩1,000 約 NT$' + (rate * 1000).toFixed(1);
+      els.rateLabel.textContent = label + '　₩1,000 ≈ NT$' + (rate * 1000).toFixed(1);
       updateFromKrw();
     }
 
     el.innerHTML =
-      '<div class="fx-title">匯率計算器</div>' +
+      '<div class="fx-head">' +
+        '<span class="fx-title">匯率計算器</span>' +
+        '<span class="fx-badge" id="fx-rate-label">估算匯率載入中...</span>' +
+      '</div>' +
       '<div class="fx-calc" aria-label="韓元台幣匯率計算器">' +
-        '<label>韓元 KRW<input id="fx-krw" type="number" inputmode="decimal" min="0" step="1000" value="10000"></label>' +
-        '<label>台幣 TWD<input id="fx-twd" type="number" inputmode="decimal" min="0" step="10"></label>' +
-        '<label>匯率<input id="fx-rate" type="number" inputmode="decimal" min="0" step="0.0001"></label>' +
+        '<label class="fx-field">' +
+          '<span class="fx-name">韓元 KRW</span>' +
+          '<span class="fx-input"><span class="fx-sym">\u20a9</span><input id="fx-krw" type="number" inputmode="decimal" min="0" step="1000" value="10000"></span>' +
+        '</label>' +
+        '<span class="fx-swap" aria-hidden="true">\u21c4</span>' +
+        '<label class="fx-field">' +
+          '<span class="fx-name">台幣 TWD</span>' +
+          '<span class="fx-input"><span class="fx-sym">NT$</span><input id="fx-twd" type="number" inputmode="decimal" min="0" step="10"></span>' +
+        '</label>' +
       '</div>' +
       '<div class="fx-summary" id="fx-summary"></div>' +
-      '<span class="fx-samples" id="fx-rate-label">估算匯率載入中...</span>';
+      '<label class="fx-rate-row">' +
+        '<span>自訂匯率</span>' +
+        '<input id="fx-rate" type="number" inputmode="decimal" min="0" step="0.0001">' +
+      '</label>';
 
     els.krw = document.getElementById('fx-krw');
     els.twd = document.getElementById('fx-twd');
@@ -364,7 +387,7 @@
       if (!data.rates || !data.rates.TWD) throw new Error('no rate');
       setRate(data.rates.TWD, '即時匯率');
     }).catch(function () {
-      els.rateLabel.textContent = '匯率暫時無法自動更新，可手動調整；目前用 ₩1,000 約 NT$23.5 估算。';
+      els.rateLabel.textContent = '離線估算　₩1,000 ≈ NT$23.5';
     });
   }
 
