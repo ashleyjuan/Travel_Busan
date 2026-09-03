@@ -1,299 +1,185 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2026 釜山家庭旅行</title>
-<meta name="description" content="2026 年 10 月 2 日至 10 月 7 日釜山 6 天 5 夜行程、航班與住宿整理。">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 釜山家庭旅行｜10/2–10/7 隨身旅遊書</title>
+<meta name="description" content="2026 年 10 月 2 日至 10 月 7 日釜山 6 天 5 夜：航班住宿、每日行程、交通攻略、美食清單、雨天備案與預約提醒。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Gowun+Batang:wght@400;700&display=swap">
-<style>
-  :root{
-    --bg:#F3F7F8;
-    --bg-raise:#FFFFFF;
-    --ink:#17272E;
-    --ink-soft:#536772;
-    --line:#D7E2E5;
-    --sea:#0C6F7C;
-    --sea-soft:#E1F0F2;
-    --coral:#D95D3E;
-    --coral-soft:#FBE9E1;
-    --pine:#2D6A4F;
-    --gold:#A67624;
-    --shadow:0 2px 16px rgba(23,39,46,.07);
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#0D181E;
-      --bg-raise:#15272F;
-      --ink:#E9F1F3;
-      --ink-soft:#9BB0B8;
-      --line:#25414B;
-      --sea:#55B9C5;
-      --sea-soft:#143842;
-      --coral:#F08A66;
-      --coral-soft:#3B2118;
-      --pine:#7FC8A9;
-      --gold:#D8B36A;
-      --shadow:0 2px 16px rgba(0,0,0,.34);
-    }
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-    line-height:1.75;
-    font-size:16px;
-  }
-  .kr{font-family:"Gowun Batang","Noto Serif TC",serif;color:var(--ink-soft);font-size:.9em}
-  a{color:var(--sea)}
-  a:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
-
-  header{
-    position:relative;
-    overflow:hidden;
-    padding:64px 24px 50px;
-    border-bottom:1px solid var(--line);
-    background:
-      linear-gradient(135deg, rgba(12,111,124,.08), transparent 42%),
-      linear-gradient(180deg, rgba(255,255,255,.45), transparent);
-  }
-  .hero-inner{max-width:920px;margin:0 auto;position:relative;z-index:1}
-  .eyebrow{letter-spacing:.28em;text-transform:uppercase;font-size:.78rem;color:var(--sea);font-weight:700}
-  h1{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(2.15rem,5.5vw,3.9rem);line-height:1.2;margin:.35em 0 .22em;text-wrap:balance}
-  .hero-sub{max-width:42em;color:var(--ink-soft);margin:0}
-  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-  .chip{background:var(--bg-raise);border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:.86rem;color:var(--ink-soft)}
-  .chip b{color:var(--ink);font-weight:700}
-  .wave{position:absolute;inset:auto 0 -2px;height:70px;color:var(--sea);opacity:.13;z-index:0}
-
-  nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
-  .nav-inner{max-width:920px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:8px 16px}
-  .nav-inner a{flex:0 0 auto;text-decoration:none;font-size:.88rem;font-weight:700;color:var(--ink-soft);padding:6px 13px;border-radius:999px}
-  .nav-inner a:hover{background:var(--sea-soft);color:var(--sea)}
-
-  main{max-width:920px;margin:0 auto;padding:18px 24px 80px}
-  .summary{padding:34px 0 12px}
-  .summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
-  .card{background:var(--bg-raise);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:18px 20px}
-  .card h3{margin:0 0 10px;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
-  .card p,.card li{color:var(--ink-soft);font-size:.93rem;margin:4px 0}
-  .card b{color:var(--ink)}
-  .card ul{margin:0;padding-left:1.1em}
-
-  .day{padding:48px 0 8px;border-bottom:1px solid var(--line);scroll-margin-top:64px}
-  .day:last-of-type{border-bottom:none}
-  .day-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
-  .day-no{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1.02rem;color:var(--coral);letter-spacing:.12em}
-  h2{font-family:"Noto Serif TC",serif;font-weight:700;font-size:clamp(1.5rem,3.3vw,1.95rem);margin:0;text-wrap:balance}
-  .day-theme{color:var(--ink-soft);font-size:.92rem;margin:6px 0 0;width:100%}
-  .slots{display:grid;gap:14px;margin-top:22px}
-  .slot{background:var(--bg-raise);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:18px 20px;display:grid;grid-template-columns:72px 1fr;gap:16px}
-  .slot-time{font-family:"Noto Serif TC",serif;font-weight:700;color:var(--sea);font-size:.92rem;padding-top:2px;letter-spacing:.05em}
-  .slot h3{margin:0 0 4px;font-size:1.06rem;font-weight:700}
-  .slot p{margin:0;color:var(--ink-soft);font-size:.94rem}
-  .tip{margin-top:10px;font-size:.86rem;color:var(--sea);background:var(--sea-soft);border-radius:8px;padding:6px 11px;display:inline-block}
-  .map-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-  .map-links a{
-    display:inline-flex;
-    align-items:center;
-    gap:5px;
-    border:1px solid var(--line);
-    border-radius:999px;
-    background:var(--bg);
-    color:var(--sea);
-    font-size:.82rem;
-    font-weight:700;
-    line-height:1.35;
-    padding:4px 10px;
-    text-decoration:none;
-  }
-  .map-links a:hover{background:var(--sea-soft)}
-  .eat{margin-top:16px;background:var(--coral-soft);border-radius:8px;padding:14px 18px;font-size:.93rem}
-  .eat b{color:var(--coral)}
-  .eat span{color:var(--ink-soft)}
-
-  .info{padding-top:54px}
-  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:20px}
-  footer{text-align:center;color:var(--ink-soft);font-size:.85rem;padding:34px 24px 46px;border-top:1px solid var(--line)}
-  @media (max-width:560px){header{padding-top:48px}.slot{grid-template-columns:1fr;gap:4px}.slot-time{padding-top:0}.hero-meta{gap:8px}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&family=Noto+Serif+TC:wght@600;700;900&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <div class="hero-inner">
-    <div class="eyebrow">Busan · 부산 · Oct 2-7, 2026</div>
-    <h1>2026 釜山 6 天 5 夜旅行</h1>
-    <p class="hero-sub">依照實際航班與住宿位置重新整理：前兩晚住西面，後三晚住廣安里。行程走法以少換車、好集合、晚上方便回飯店為主。</p>
-    <div class="hero-meta">
-      <div class="chip">日期 <b>2026/10/2（五）- 10/7（三）</b></div>
-      <div class="chip">航班 <b>釜山航空 BX794 / BX791</b></div>
-      <div class="chip">住宿 <b>西面 2 晚 · 廣安里 3 晚</b></div>
-      <div class="chip">交通 <b>地鐵＋公車＋必要時叫車</b></div>
-    </div>
-  </div>
-  <svg class="wave" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C150,10 300,70 450,40 C600,10 750,70 900,40 C1050,10 1200,70 1200,40 L1200,70 L0,70 Z" fill="currentColor"/></svg>
-</header>
-
-<nav aria-label="每日行程導覽">
-  <div class="nav-inner">
-    <a href="#overview">總覽</a>
-    <a href="#d1">10/2 抵達</a>
-    <a href="#d2">10/3 松島</a>
-    <a href="#d3">10/4 ARTE</a>
-    <a href="#d4">10/5 清沙埔</a>
-    <a href="#d5">10/6 Luge</a>
-    <a href="#d6">10/7 回程</a>
-    <a href="#info">實用資訊</a>
-  </div>
+<nav class="topnav" aria-label="網站章節導覽">
+  <a href="#overview">總覽</a>
+  <a href="#prep">行前準備</a>
+  <a href="#itinerary">每日行程</a>
+  <a href="#transport">交通攻略</a>
+  <a href="#food">美食清單</a>
+  <a href="#pocket">口袋名單</a>
+  <a href="#packing">行李清單</a>
+  <a href="#refs">參考資源</a>
 </nav>
 
+<header class="hero">
+  <h1>2026 釜山家庭旅行</h1>
+  <p class="sub">西面 × 廣安里 × 海雲台 × 清沙埔 × 機張</p>
+  <span class="dates">2026.10.2（五）— 10.7（三）｜6 天 5 夜・西面 2 晚＋廣安里 3 晚</span>
+</header>
+
 <main>
-  <section class="summary" id="overview">
-    <div class="day-head">
-      <span class="day-no">TRIP</span>
-      <h2>航班與住宿</h2>
-      <p class="day-theme">截圖中的資料已整理在這裡，方便大家出發前核對。</p>
-    </div>
-    <div class="summary-grid">
-      <div class="card">
-        <h3>去程航班</h3>
-        <p><b>10/2（五）BX794</b></p>
-        <p>13:30 臺灣桃園國際機場 T2 → 17:05 金海國際機場 I</p>
-        <p>航空公司訂位代號：KD5L5G</p>
-      </div>
-      <div class="card">
-        <h3>回程航班</h3>
-        <p><b>10/7（三）BX791</b></p>
-        <p>14:15 金海國際機場 I → 15:50 臺灣桃園國際機場 T2</p>
-        <p>建議 11:15 左右從廣安里出發前往機場。</p>
-      </div>
-      <div class="card">
-        <h3>住宿 1</h3>
-        <p><b>Gem Stay Seomyeon</b></p>
-        <p>10/2（五）- 10/4（日），入住 16:00 後，退房 09:00-11:00。</p>
-        <p>#204, 752, Jungang-daero, Busanjin-gu, 47245 Busan, Korea</p>
-        <div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gem%20Stay%20Seomyeon%20%23204%20752%20Jungang-daero%20Busanjin-gu%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Gem%20Stay%20Seomyeon%20%23204%20752%20Jungang-daero%20Busanjin-gu%20Busan" target="_blank" rel="noopener">Naver Map</a></div>
-      </div>
-      <div class="card">
-        <h3>住宿 2</h3>
-        <p><b>光州里1號酒店</b></p>
-        <p>10/4（日）- 10/7（三），入住 16:00 後，退房 06:00-11:00。</p>
-        <p>203, Gwanganhaebyeon-ro, Suyeong-gu, 48303 Busan, Korea</p>
-        <p>電話：+82 51-759-1011</p>
-        <div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=203%20Gwanganhaebyeon-ro%20Suyeong-gu%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/203%20Gwanganhaebyeon-ro%20Suyeong-gu%20Busan" target="_blank" rel="noopener">Naver Map</a></div>
-      </div>
-    </div>
-  </section>
+<section id="overview">
+  <h2 class="section-title">總覽 <span class="sec-en">Overview</span></h2>
+  <div class="widgets">
+    <div id="fx-widget">匯率載入中...（需網路連線）</div>
+    <div id="weather-widget">釜山天氣載入中...（需網路連線）</div>
+  </div>
 
-  <section class="day" id="d1">
-    <div class="day-head">
-      <span class="day-no">DAY 1</span>
-      <h2>10/2（五）抵達釜山 · 西面入住</h2>
-      <p class="day-theme">第一天以順利入境、交通卡、晚餐與便利採買為主，不排硬行程。</p>
+  <div class="card highlight">
+    <h3>已開票：釜山航空 Busan Air</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>去程 10/2（五）</th><td><strong>BX794</strong> 桃園 TPE T2 <strong>13:30</strong> → <strong>17:05</strong> 金海國際機場 PUS I，抵達後先買／加值 T-money 或 Cashbee。</td></tr>
+        <tr><th>回程 10/7（三）</th><td><strong>BX791</strong> 金海國際機場 PUS I <strong>14:15</strong> → <strong>15:50</strong> 桃園 TPE T2。建議 11:15 左右從廣安里出發，抓足退稅、托運與安檢時間。</td></tr>
+        <tr><th>路線策略</th><td>前段住西面，西側景點與南浦洞最順；後段住廣安里，海雲台、清沙埔、Centum City、機張都能用地鐵 2 號線／東海線銜接。</td></tr>
+      </table>
     </div>
-    <div class="slots">
-      <div class="slot"><div class="slot-time">13:30</div><div><h3>桃園 T2 起飛</h3><p>搭乘釜山航空 BX794，飛行時間約 2 小時 35 分。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Taiwan%20Taoyuan%20International%20Airport%20Terminal%202" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Taiwan%20Taoyuan%20International%20Airport%20Terminal%202" target="_blank" rel="noopener">Naver Map</a></div></div></div>
-      <div class="slot"><div class="slot-time">17:05</div><div><h3>抵達金海國際機場</h3><p>入境後先買或加值 T-money / Cashbee 交通卡。若行李多，這天建議直接叫車到西面住宿。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gimhae%20International%20Airport%20International%20Terminal" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Gimhae%20International%20Airport%20International%20Terminal" target="_blank" rel="noopener">Naver Map</a></div><span class="tip">機場到西面：地鐵轉乘約 45-55 分鐘，叫車約 30-45 分鐘，依塞車狀況調整。</span></div></div>
-      <div class="slot"><div class="slot-time">晚上</div><div><h3>入住 Gem Stay Seomyeon · 西面晚餐</h3><p>放好行李後在西面商圈吃晚餐，附近適合安排豬肉湯飯、烤肉或地下街簡單逛街。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gem%20Stay%20Seomyeon%20%23204%20752%20Jungang-daero%20Busanjin-gu%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Gem%20Stay%20Seomyeon%20%23204%20752%20Jungang-daero%20Busanjin-gu%20Busan" target="_blank" rel="noopener">Naver Map</a></div></div></div>
-    </div>
-    <div class="eat"><b>今日美食</b> — 西面豬肉湯飯一條街、烤肉、便利商店宵夜。<span>第一晚先把水、零食、轉接頭或雨具補齊。</span></div>
-  </section>
+  </div>
 
-  <section class="day" id="d2">
-    <div class="day-head">
-      <span class="day-no">DAY 2</span>
-      <h2>10/3（六）甘川洞 · 松島海上纜車 · 廣安里無人機秀</h2>
-      <p class="day-theme">住西面時往西側景點最順，把甘川洞、松島纜車、南浦市場與週六廣安里夜景串成一天。</p>
+  <div class="card highlight">
+    <h3>住宿安排</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>10/2–10/4</th><td><strong>Gem Stay Seomyeon</strong>：#204, 752, Jungang-daero, Busanjin-gu, Busan。入住 16:00 後、退房 09:00–11:00。西面商圈吃飯、採買、換車都方便。</td></tr>
+        <tr><th>10/4–10/7</th><td><strong>光州里1號酒店</strong>：203, Gwanganhaebyeon-ro, Suyeong-gu, Busan。入住 16:00 後、退房 06:00–11:00。飯店在廣安海邊路，晚上回來看廣安大橋很舒服。</td></tr>
+        <tr><th>換宿日</th><td>10/4 先把行李送到廣安里飯店寄放，再去 ARTE MUSEUM；16:00 入住後輕裝前往 Spa Land。</td></tr>
+      </table>
     </div>
-    <div class="slots">
-      <div class="slot"><div class="slot-time">上午</div><div><h3>甘川洞文化村 <span class="kr">감천문화마을</span></h3><p>彩色山城、壁畫巷和小王子拍照點。建議早點出門，避開中午人潮與日曬。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gamcheon%20Culture%20Village%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Gamcheon%20Culture%20Village%20Busan" target="_blank" rel="noopener">Naver Map</a></div><span class="tip">從土城站轉社區小巴 2 或 2-2；回程可接南浦洞。</span></div></div>
-      <div class="slot"><div class="slot-time">午後</div><div><h3>松島天空步道 · 松島海上纜車 <span class="kr">송도해상케이블카</span></h3><p>從甘川洞往松島移動，先走海邊天空步道，再搭海上纜車到松島天空公園。想要透明地板就選 Crystal Cruise 車廂。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Songdo%20Skywalk%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Songdo%20Skywalk%20Busan" target="_blank" rel="noopener">Naver Map</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Songdo%20Marine%20Cable%20Car%20Busan" target="_blank" rel="noopener">纜車 Google</a><a href="https://map.naver.com/p/search/Songdo%20Marine%20Cable%20Car%20Busan" target="_blank" rel="noopener">纜車 Naver</a></div><span class="tip">這段建議短程叫車，能省下公車轉乘時間，也比較好銜接晚上的廣安里。</span></div></div>
-      <div class="slot"><div class="slot-time">傍晚</div><div><h3>BIFF 廣場 · 國際市場 · 札嘎其市場</h3><p>回南浦洞吃小吃和逛街，從國際市場一路散步到札嘎其市場；想吃海鮮就把晚餐提前。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=BIFF%20Square%20Busan" target="_blank" rel="noopener">BIFF Google</a><a href="https://map.naver.com/p/search/BIFF%20Square%20Busan" target="_blank" rel="noopener">BIFF Naver</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Gukje%20Market%20Busan" target="_blank" rel="noopener">國際市場 Google</a><a href="https://map.naver.com/p/search/Gukje%20Market%20Busan" target="_blank" rel="noopener">國際市場 Naver</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Jagalchi%20Market%20Busan" target="_blank" rel="noopener">札嘎其 Google</a><a href="https://map.naver.com/p/search/Jagalchi%20Market%20Busan" target="_blank" rel="noopener">札嘎其 Naver</a></div></div></div>
-      <div class="slot"><div class="slot-time">晚上</div><div><h3>廣安里 M Drone Light Show</h3><p>2026/10/3 是週六，廣安里固定週六晚間展演，10 月通常是 19:00、21:00 兩場；建議抵達海灘後先找咖啡廳或沙灘位置。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gwangalli%20Beach%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Gwangalli%20Beach%20Busan" target="_blank" rel="noopener">Naver Map</a></div><span class="tip">展演會受雨、強風或現場通訊狀況影響，當天再查官方公告。</span></div></div>
-    </div>
-    <div class="eat"><b>今日美食</b> — BIFF 堅果糖餅、忠武飯捲、札嘎其生魚片或松島烤貝。<span>看完秀可搭地鐵 2 號線回西面。</span></div>
-  </section>
+  </div>
 
-  <section class="day" id="d3">
-    <div class="day-head">
-      <span class="day-no">DAY 3</span>
-      <h2>10/4（日）西面退房 · ARTE MUSEUM · Spa Land</h2>
-      <p class="day-theme">換宿日用室內景點為主軸：影島沉浸式藝術展，晚上到 Centum City 泡湯放鬆。</p>
+  <div class="card">
+    <h3>預算摘要</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>項目</th><th>估算</th><th>說明</th></tr>
+        <tr><td>交通</td><td>約 ₩45,000–80,000／人</td><td>地鐵、公車、機場往返與幾段短程叫車分攤。換宿、松島、影島、機張可適度叫車省體力。</td></tr>
+        <tr><td>餐飲</td><td>約 ₩210,000–330,000／人</td><td>每天約 ₩35,000–55,000；若安排機張雪蟹、烤貝，當日預算會明顯提高。</td></tr>
+        <tr><td>門票體驗</td><td>約 ₩150,000–260,000／人</td><td>松島海上纜車、ARTE MUSEUM、Spa Land、Blue Line Park 膠囊／海岸列車、Skyline Luge，依票種與預約價變動。</td></tr>
+        <tr><td><strong>總計</strong></td><td><strong>約 ₩405,000–670,000／人</strong></td><td>不含機票住宿與購物。若同行者不玩 Luge 或不吃雪蟹，可往低標抓。</td></tr>
+      </table>
     </div>
-    <div class="slots">
-      <div class="slot"><div class="slot-time">上午</div><div><h3>退房與行李轉場</h3><p>Gem Stay Seomyeon 退房時間 09:00-11:00。退房後可先把行李帶到廣安里飯店寄放，或視人數直接叫車移動。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gem%20Stay%20Seomyeon%20%23204%20752%20Jungang-daero%20Busanjin-gu%20Busan" target="_blank" rel="noopener">Gem Stay Google</a><a href="https://map.naver.com/p/search/Gem%20Stay%20Seomyeon%20%23204%20752%20Jungang-daero%20Busanjin-gu%20Busan" target="_blank" rel="noopener">Gem Stay Naver</a><a href="https://www.google.com/maps/search/?api=1&amp;query=203%20Gwanganhaebyeon-ro%20Suyeong-gu%20Busan" target="_blank" rel="noopener">新飯店 Google</a><a href="https://map.naver.com/p/search/203%20Gwanganhaebyeon-ro%20Suyeong-gu%20Busan" target="_blank" rel="noopener">新飯店 Naver</a></div></div></div>
-      <div class="slot"><div class="slot-time">中午</div><div><h3>ARTE MUSEUM 釜山 <span class="kr">아르떼뮤지엄 부산</span></h3><p>位在影島的沉浸式數位藝術館，展場以海洋與自然意象為主，很適合排在天氣不穩或換住宿的日子。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=ARTE%20MUSEUM%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/ARTE%20MUSEUM%20Busan" target="_blank" rel="noopener">Naver Map</a></div><span class="tip">常見營業時間 10:00-20:00，最後入場約 19:00；從西面或廣安里過去建議叫車最省力。</span></div></div>
-      <div class="slot"><div class="slot-time">16:00</div><div><h3>入住光州里1號酒店</h3><p>飯店就在廣安海邊路，先完成入住、整理行李，再輕裝前往 Centum City。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=203%20Gwanganhaebyeon-ro%20Suyeong-gu%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/203%20Gwanganhaebyeon-ro%20Suyeong-gu%20Busan" target="_blank" rel="noopener">Naver Map</a></div></div></div>
-      <div class="slot"><div class="slot-time">晚上</div><div><h3>新世界 Centum City · Spa Land <span class="kr">스파랜드 센텀시티</span></h3><p>用高級韓式汗蒸幕收尾：溫泉池、汗蒸房、休息區都在新世界百貨內，從廣安里搭地鐵或叫車都很近。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Shinsegae%20Centum%20City%20Busan" target="_blank" rel="noopener">新世界 Google</a><a href="https://map.naver.com/p/search/Shinsegae%20Centum%20City%20Busan" target="_blank" rel="noopener">新世界 Naver</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Spa%20Land%20Centum%20City%20Busan" target="_blank" rel="noopener">Spa Land Google</a><a href="https://map.naver.com/p/search/Spa%20Land%20Centum%20City%20Busan" target="_blank" rel="noopener">Spa Land Naver</a></div><span class="tip">常見營業時間 09:00-22:00，入場多為 4 小時制；泡湯前後補水，餐點可在百貨或 Spa Land 內解決。</span></div></div>
-    </div>
-    <div class="eat"><b>今日美食</b> — 影島咖啡、Centum City 美食街、廣安里烤肉或炸雞。<span>這天室內比例高，遇雨也不用大改行程。</span></div>
-  </section>
+  </div>
 
-  <section class="day" id="d4">
-    <div class="day-head">
-      <span class="day-no">DAY 4</span>
-      <h2>10/5（一）海雲台 · 膠囊列車 · 清沙埔 DIART COFFEE</h2>
-      <p class="day-theme">從廣安里出發到海雲台很順，安排沙灘、膠囊列車、DIART COFFEE、清沙埔日落與海岸列車回程。</p>
-    </div>
-    <div class="slots">
-      <div class="slot"><div class="slot-time">上午</div><div><h3>海雲台海水浴場 · 冬柏島</h3><p>先走海雲台沙灘，再到冬柏島步道和 APEC 世峰樓，路線平順、海景漂亮。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Haeundae%20Beach%20Busan" target="_blank" rel="noopener">海雲台 Google</a><a href="https://map.naver.com/p/search/Haeundae%20Beach%20Busan" target="_blank" rel="noopener">海雲台 Naver</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Dongbaekseom%20Busan" target="_blank" rel="noopener">冬柏島 Google</a><a href="https://map.naver.com/p/search/Dongbaekseom%20Busan" target="_blank" rel="noopener">冬柏島 Naver</a></div></div></div>
-      <div class="slot"><div class="slot-time">中午</div><div><h3>DIART COFFEE · 土耳其蜂蜜奶油麵包 <span class="kr">디아트커피</span></h3><p>先到清沙埔人氣咖啡店吃 Kaymak 風格的土耳其蜂蜜奶油麵包，濃厚奶油配蜂蜜很適合當海線甜點。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=DIART%20COFFEE%20Busan%20Cheongsapo" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/DIART%20COFFEE%20Busan%20Cheongsapo" target="_blank" rel="noopener">Naver Map</a></div><span class="tip">招牌甜點下午容易售完，建議午前或剛開店後前往，吃完再去搭膠囊列車也可以。</span></div></div>
-      <div class="slot"><div class="slot-time">下午</div><div><h3>海雲台 Blue Line Park · 天空膠囊列車 <span class="kr">스카이캡슐</span></h3><p>從尾浦搭天空膠囊列車到清沙埔，復古小車廂沿海慢慢前進，是這天最值得保留的體驗。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Haeundae%20Blueline%20Park%20Mipo%20Station" target="_blank" rel="noopener">尾浦 Google</a><a href="https://map.naver.com/p/search/Haeundae%20Blueline%20Park%20Mipo%20Station" target="_blank" rel="noopener">尾浦 Naver</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Haeundae%20Blueline%20Park%20Cheongsapo%20Station" target="_blank" rel="noopener">清沙埔站 Google</a><a href="https://map.naver.com/p/search/Haeundae%20Blueline%20Park%20Cheongsapo%20Station" target="_blank" rel="noopener">清沙埔站 Naver</a></div><span class="tip">建議提早線上預約「尾浦 → 清沙埔」方向；如果先去 DIART，可改搭計程車到尾浦再坐膠囊回清沙埔。</span></div></div>
-      <div class="slot"><div class="slot-time">傍晚</div><div><h3>清沙埔紅白燈塔 · 踏石展望台</h3><p>小漁港、燈塔、海上展望台很適合看日落。晚餐可吃清沙埔烤貝，再用海岸列車回尾浦。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Cheongsapo%20Daritdol%20Observatory%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Cheongsapo%20Daritdol%20Observatory%20Busan" target="_blank" rel="noopener">Naver Map</a></div></div></div>
-      <div class="slot"><div class="slot-time">晚上</div><div><h3>海岸列車回海雲台 <span class="kr">해변열차</span></h3><p>回程搭海岸列車，可停靠沿線站點，和天空膠囊是不同視角。回到尾浦後再轉車回廣安里。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Haeundae%20Blueline%20Park%20Cheongsapo%20Station" target="_blank" rel="noopener">清沙埔站 Google</a><a href="https://map.naver.com/p/search/Haeundae%20Blueline%20Park%20Cheongsapo%20Station" target="_blank" rel="noopener">清沙埔站 Naver</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Haeundae%20Blueline%20Park%20Mipo%20Station" target="_blank" rel="noopener">尾浦站 Google</a><a href="https://map.naver.com/p/search/Haeundae%20Blueline%20Park%20Mipo%20Station" target="_blank" rel="noopener">尾浦站 Naver</a></div><span class="tip">最佳搭法：去程膠囊列車、回程海岸列車；若體力夠可加停松亭海水浴場。</span></div></div>
-    </div>
-    <div class="eat"><b>今日美食</b> — DIART COFFEE 土耳其蜂蜜奶油麵包、海雲台鱈魚湯、清沙埔烤貝。<span>若天氣不好，把藍線公園改成 Centum City 室內備案。</span></div>
-  </section>
+  <div class="card">
+    <h3>行程一覽</h3>
+    <ul>
+      <li><strong>D1 10/2（五）</strong> 台北 → 釜山・西面入住・晚餐採買</li>
+      <li><strong>D2 10/3（六）</strong> 甘川洞文化村・松島海上纜車・南浦市場・廣安里無人機秀</li>
+      <li><strong>D3 10/4（日）</strong> 西面退房・ARTE MUSEUM 釜山・廣安里入住・Spa Land Centum City</li>
+      <li><strong>D4 10/5（一）</strong> 海雲台・清沙埔 DIART COFFEE・天空膠囊列車・海岸列車</li>
+      <li><strong>D5 10/6（二）</strong> 海東龍宮寺・Skyline Luge Busan・樂天 Outlet／機張海鮮</li>
+      <li><strong>D6 10/7（三）</strong> 廣安里早餐・退房・前往金海機場・回台北</li>
+    </ul>
+  </div>
+</section>
 
-  <section class="day" id="d5">
-    <div class="day-head">
-      <span class="day-no">DAY 5</span>
-      <h2>10/6（二）海東龍宮寺 · Skyline Luge · Outlet</h2>
-      <p class="day-theme">最後一個完整旅遊日往東北海岸走，把海上寺廟、機張冒險體驗與 Outlet 排在 Osiria 生活圈。</p>
-    </div>
-    <div class="slots">
-      <div class="slot"><div class="slot-time">上午</div><div><h3>海東龍宮寺 <span class="kr">해동용궁사</span></h3><p>建在海岸岩石上的寺廟，早上光線較好、人潮也比較可控。從廣安里出發可地鐵轉東海線，再接公車或短程叫車。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Haedong%20Yonggungsa%20Temple%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Haedong%20Yonggungsa%20Temple%20Busan" target="_blank" rel="noopener">Naver Map</a></div></div></div>
-      <div class="slot"><div class="slot-time">中午</div><div><h3>Skyline Luge Busan <span class="kr">스카이라인 루지 부산</span></h3><p>在 Osiria 園區搭纜椅上山，再自己操控無動力滑車一路滑下來；比樂園輕量，但很有旅行記憶點。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Skyline%20Luge%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Skyline%20Luge%20Busan" target="_blank" rel="noopener">Naver Map</a></div><span class="tip">官方常見營業約 10:00-18:00，最後售票約關門前 45 分鐘；風雨天出發前先確認營運。</span></div></div>
-      <div class="slot"><div class="slot-time">下午</div><div><h3>樂天 Premium Outlet 東釜山 · 機張海鮮</h3><p>Outlet 與樂天世界釜山在同區，購物、咖啡、超市採買都方便。想吃雪蟹可改往機張市場；不吃蟹就在龍宮寺周邊吃海鮮麵疙瘩。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Lotte%20Premium%20Outlet%20Dongbusan" target="_blank" rel="noopener">Outlet Google</a><a href="https://map.naver.com/p/search/Lotte%20Premium%20Outlet%20Dongbusan" target="_blank" rel="noopener">Outlet Naver</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Gijang%20Market%20Busan" target="_blank" rel="noopener">機張市場 Google</a><a href="https://map.naver.com/p/search/Gijang%20Market%20Busan" target="_blank" rel="noopener">機張市場 Naver</a></div></div></div>
-      <div class="slot"><div class="slot-time">晚上</div><div><h3>回廣安里海邊散步</h3><p>最後一晚留給廣安大橋夜景，適合整理行李、買隔天早餐和伴手禮。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gwangalli%20Beach%20Busan" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Gwangalli%20Beach%20Busan" target="_blank" rel="noopener">Naver Map</a></div></div></div>
-    </div>
-    <div class="eat"><b>今日美食</b> — 龍宮寺海鮮麵疙瘩、機張雪蟹、Outlet 甜點、廣安里海景酒吧或咖啡。<span>Skyline Luge、Outlet、樂天世界都在同區，若有人不玩 Luge 也能分流。</span></div>
-  </section>
+<section id="prep">
+  <h2 class="section-title">行前準備 <span class="sec-en">Before You Go</span></h2>
+  <div class="card">
+    <h3>必辦清單</h3>
+    <ul class="checklist">
+      <li><span class="when">已完成</span>確認航班 BX794 / BX791 與兩段住宿訂單，手機離線截圖備份。</li>
+      <li><span class="when">出發前</span>確認護照效期、台灣旅客短期觀光免簽與 K-ETA 暫免公告。</li>
+      <li><span class="when">盡早</span>預約海雲台 Blue Line Park 天空膠囊列車，建議選「尾浦 → 清沙埔」。</li>
+      <li><span class="when">盡早</span>確認 Skyline Luge、ARTE MUSEUM、Spa Land、松島纜車門票是否要先買。</li>
+      <li><span class="when">出發前 1 週</span>購買 eSIM、旅遊平安險與不便險，並開通信用卡海外交易。</li>
+      <li><span class="when">前一天</span>查天氣、Blue Line Park 班次、Skyline Luge 天候營運、廣安里無人機秀公告。</li>
+    </ul>
+  </div>
 
-  <section class="day" id="d6">
-    <div class="day-head">
-      <span class="day-no">DAY 6</span>
-      <h2>10/7（三）退房 · 前往金海機場</h2>
-      <p class="day-theme">回程班機 14:15 起飛，早上只安排附近早餐與移動，保留緩衝。</p>
+  <div class="card">
+    <h3>預約優先順序</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>最優先</th><td><strong>天空膠囊列車</strong>：熱門時段容易滿，建議先搶。若膠囊沒票，海岸列車仍可保留海線體驗。</td></tr>
+        <tr><th>第二優先</th><td><strong>Skyline Luge Busan</strong>：可現場買，但遇天候變動要先看官方公告，機張日別排太晚。</td></tr>
+        <tr><th>彈性安排</th><td><strong>ARTE MUSEUM、Spa Land、松島纜車</strong>：通常現場或當天線上都可處理，但連假人潮要提早。</td></tr>
+        <tr><th>餐飲提醒</th><td><strong>DIART COFFEE</strong> 招牌土耳其蜂蜜奶油麵包容易售完，行程特別排在午前／中午。</td></tr>
+      </table>
     </div>
-    <div class="slots">
-      <div class="slot"><div class="slot-time">上午</div><div><h3>廣安里早餐 · 退房</h3><p>光州里1號酒店退房時間 06:00-11:00。建議早餐後回飯店整理行李，11:00 前完成退房。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=203%20Gwanganhaebyeon-ro%20Suyeong-gu%20Busan" target="_blank" rel="noopener">飯店 Google</a><a href="https://map.naver.com/p/search/203%20Gwanganhaebyeon-ro%20Suyeong-gu%20Busan" target="_blank" rel="noopener">飯店 Naver</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Gwangalli%20Beach%20Busan" target="_blank" rel="noopener">廣安里 Google</a><a href="https://map.naver.com/p/search/Gwangalli%20Beach%20Busan" target="_blank" rel="noopener">廣安里 Naver</a></div></div></div>
-      <div class="slot"><div class="slot-time">11:15</div><div><h3>出發前往金海國際機場</h3><p>若人多或行李多，建議叫車或預約大型車。搭大眾運輸則需地鐵轉機場輕軌，務必抓足轉乘時間。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gimhae%20International%20Airport%20International%20Terminal" target="_blank" rel="noopener">Google Maps</a><a href="https://map.naver.com/p/search/Gimhae%20International%20Airport%20International%20Terminal" target="_blank" rel="noopener">Naver Map</a></div><span class="tip">國際線建議起飛前 2.5 小時抵達，BX791 14:15 起飛，目標 11:45-12:00 抵達機場。</span></div></div>
-      <div class="slot"><div class="slot-time">14:15</div><div><h3>BX791 回台北</h3><p>15:50 抵達臺灣桃園國際機場 T2。行李托運前記得把液體、泡菜或醬料類伴手禮放托運。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Taiwan%20Taoyuan%20International%20Airport%20Terminal%202" target="_blank" rel="noopener">桃園 T2 Google</a><a href="https://map.naver.com/p/search/Taiwan%20Taoyuan%20International%20Airport%20Terminal%202" target="_blank" rel="noopener">桃園 T2 Naver</a></div></div></div>
-    </div>
-    <div class="eat"><b>伴手禮</b> — 海苔、魚板禮盒、蜂蜜柚子茶、韓國零食、美妝。<span>市區買通常比機場選擇多，最後一晚先整理好。</span></div>
-  </section>
+  </div>
+</section>
 
-  <section class="info" id="info">
-    <div class="day-head">
-      <span class="day-no">NOTES</span>
-      <h2>實用資訊</h2>
-      <p class="day-theme">給同行者看的共同提醒，出發前可再依天氣和體力微調。</p>
+<section id="itinerary">
+  <h2 class="section-title">每日行程 <span class="sec-en">Day by Day</span></h2>
+  <p class="section-note">每張卡片可切換主方案與雨天備案；導航按鈕會開 Google Maps 大眾運輸路線。</p>
+  <div id="day-nav"></div>
+  <div id="days-container"><noscript>此頁面需要啟用 JavaScript 才能顯示每日行程。</noscript></div>
+</section>
+
+<section id="transport">
+  <h2 class="section-title">交通攻略 <span class="sec-en">Getting Around</span></h2>
+  <div class="card">
+    <h3>市區移動原則</h3>
+    <ul>
+      <li><strong>Naver Map</strong> 是韓國路線主力；Google Maps 適合找景點位置與分享連結。</li>
+      <li><strong>T-money / Cashbee</strong> 可搭地鐵、公車與便利商店小額付款，機場便利商店即可購買或加值。</li>
+      <li>釜山景點常需要地鐵接公車，帶長輩或行李時，短程叫車會大幅提升舒適度。</li>
+      <li>廣安里住宿位置很適合後半段：往海雲台、Centum City、機張都不繞。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>關鍵交通段</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>金海機場 → 西面</th><td>輕軌轉地鐵約 45–55 分鐘；行李多可叫車約 30–45 分鐘。</td></tr>
+        <tr><th>西面 → 甘川洞／南浦</th><td>地鐵到土城站轉社區小巴；甘川洞結束後接南浦洞很順。</td></tr>
+        <tr><th>南浦／甘川洞 → 松島</th><td>公車可達，但家庭旅行建議短程叫車，省下等車與上坡步行。</td></tr>
+        <tr><th>廣安里 → 海雲台</th><td>地鐵 2 號線銜接最穩；尾浦、清沙埔之間用 Blue Line Park 體驗替代移動。</td></tr>
+        <tr><th>廣安里 → 機張 Osiria</th><td>地鐵 2 號線接東海線，或叫車直達龍宮寺／Skyline Luge 分段玩。</td></tr>
+        <tr><th>廣安里 → 金海機場</th><td>回程建議 11:15 出發；多人行李多時叫車比轉乘安心。</td></tr>
+      </table>
     </div>
-    <div class="info-grid">
-      <div class="card"><h3>交通</h3><ul><li><b>Naver Map</b> 查韓國路線最準，Google Maps 可輔助看地點。</li><li><b>T-money / Cashbee</b> 可搭地鐵、公車，也能在便利商店加值。</li><li>多人移動、換宿日、機場日，叫車通常比拖行李轉乘舒服。</li></ul></div>
-      <div class="card"><h3>行前文件</h3><ul><li>臺灣旅客 2026 年底前仍在 K-ETA 暫時豁免期間，但出發前建議再確認官方公告。</li><li>護照、機票、住宿訂單可各自存一份離線截圖。</li><li>飯店地址建議同時存英文和韓文，叫車或問路較方便。</li></ul></div>
-      <div class="card"><h3>預約提醒</h3><ul><li>海雲台藍線公園天空膠囊建議提早預約，海岸列車可作回程銜接。</li><li>Skyline Luge、ARTE MUSEUM、Spa Land 出發前一天再確認營業時間與最後入場。</li><li>DIART COFFEE 的土耳其蜂蜜奶油麵包容易售完，排午前最安心。</li><li>廣安里無人機秀固定週六晚間，仍可能因天候取消或延後。</li></ul></div>
-      <div class="card"><h3>官方資訊</h3><ul><li><a href="https://busan.skylineluge.kr/en/" target="_blank" rel="noopener">Skyline Luge Busan</a></li><li><a href="https://artemuseum.com/busan" target="_blank" rel="noopener">ARTE MUSEUM Busan</a></li><li><a href="https://english.visitkorea.or.kr/" target="_blank" rel="noopener">Visit Korea 行前資訊</a></li><li><a href="https://www.visitbusan.net/" target="_blank" rel="noopener">Visit Busan 景點資訊</a></li></ul></div>
-      <div class="card"><h3>分工建議</h3><ul><li>一人負責交通路線，一人負責餐廳候補，一人負責每天集合時間。</li><li>每天保留 1-2 個可刪景點，遇到下雨或累了就改成咖啡廳。</li><li>海邊風大，10 月建議帶薄外套和好走的鞋。</li></ul></div>
-    </div>
-  </section>
+  </div>
+</section>
+
+<section id="food">
+  <h2 class="section-title">美食清單 <span class="sec-en">Where to Eat</span></h2>
+  <div class="card"><h3>行程內必吃</h3><div class="food-grid" id="food-featured"></div></div>
+  <div class="card"><h3>釜山經典</h3><div class="food-grid" id="food-classic"></div></div>
+</section>
+
+<section id="pocket">
+  <h2 class="section-title">口袋名單 <span class="sec-en">Flexible Picks</span></h2>
+  <p class="section-note">不排死在每日行程裡，遇到下雨、體力好、臨時想逛街時再抽換。</p>
+  <div class="card"><h3>雨天與室內備案</h3><div class="food-grid" id="pocket-rain"></div></div>
+  <div class="card"><h3>多出半天可加碼</h3><div class="food-grid" id="pocket-extra"></div></div>
+</section>
+
+<section id="packing">
+  <h2 class="section-title">行李清單 <span class="sec-en">Packing List</span><button id="packing-toggle" class="toggle-btn" type="button">收合</button></h2>
+  <div id="packing-body">
+    <div class="card"><h3>證件與金錢</h3><ul class="checklist"><li>護照、機票、住宿訂單、旅平險保單截圖</li><li>信用卡 2 張、少量韓元現金、T-money / Cashbee</li><li>飯店地址韓文／英文、同行者聯絡方式</li></ul></div>
+    <div class="card"><h3>10 月釜山衣物</h3><ul class="checklist"><li>薄外套或防風外套，海邊晚上風會變涼</li><li>好走的鞋，甘川洞、龍宮寺、清沙埔都有坡或階梯</li><li>雨傘、帽子、墨鏡、防曬，海邊行程多</li></ul></div>
+    <div class="card"><h3>Spa Land 與海線小物</h3><ul class="checklist"><li>Spa Land 可輕裝前往，泡湯後保養品與替換襪子會很實用</li><li>行動電源、充電線、eSIM，膠囊列車與海岸列車拍照耗電</li><li>小塑膠袋或收納袋，裝濕雨傘、零食、伴手禮</li></ul></div>
+  </div>
+</section>
+
+<section id="refs">
+  <h2 class="section-title">參考資源 <span class="sec-en">References</span></h2>
+  <div class="card">
+    <h3>官方資訊</h3>
+    <ul>
+      <li><a href="https://busan.skylineluge.kr/en/" target="_blank" rel="noopener">Skyline Luge Busan</a>：營業、票價、天候營運公告。</li>
+      <li><a href="https://artemuseum.com/busan" target="_blank" rel="noopener">ARTE MUSEUM Busan</a>：展覽、營業時間與票價。</li>
+      <li><a href="https://www.visitbusan.net/" target="_blank" rel="noopener">Visit Busan</a>：釜山市官方景點資訊。</li>
+      <li><a href="https://english.visitkorea.or.kr/" target="_blank" rel="noopener">Visit Korea</a>：入境、K-ETA 與旅遊公告。</li>
+    </ul>
+  </div>
+</section>
 </main>
-<footer>2026 釜山家庭旅行 · 좋은 여행 되세요</footer>
+<footer>2026 釜山家庭旅行 · 隨身旅遊書 · 좋은 여행 되세요</footer>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
