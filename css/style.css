@@ -705,11 +705,6 @@ footer {
 
 @media (min-width: 780px) {
   .card { padding: 22px 24px; }
-  .food-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0 24px;
-  }
-  .food-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
 }
 
 @media (max-width: 560px) {
