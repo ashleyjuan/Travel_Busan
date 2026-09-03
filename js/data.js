@@ -277,3 +277,45 @@ window.TRIP = {
     { name: '梵魚寺', desc: '想加入山寺氣氛可替換半天，但此趟天數較短，列為備選。', map: 'Beomeosa Temple Busan', book: { label: '寺院資訊', url: 'https://www.beomeo.kr/eng/sub1.php' } }
   ]
 };
+
+// Naver Map 搜尋用韓文地點名稱（韓國導航主力；沒有對應的地點只顯示 Google Maps）
+window.NAVER_PLACES = {
+  'Gimhae International Airport': '김해국제공항',
+  'Gem Stay Seomyeon Busan': '젬스테이 서면',
+  'Seomyeon Food Alley Busan': '서면 먹자골목',
+  'Seomyeon Dwaeji Gukbap Street Busan': '서면 돼지국밥거리',
+  'Seomyeon Underground Shopping Center Busan': '서면지하상가',
+  'Gamcheon Culture Village Busan': '감천문화마을',
+  'Gamcheon Culture Village Cafe': '감천문화마을 카페',
+  'Songdo Marine Cable Car Busan': '송도해상케이블카',
+  'BIFF Square Busan': 'BIFF광장',
+  'Jagalchi Market Busan': '자갈치시장',
+  'Gukje Market Busan': '국제시장',
+  'Lotte Department Store Gwangbok Busan': '롯데백화점 광복점',
+  'Busan Tower': '부산타워',
+  'Gwangalli Beach Busan': '광안리해수욕장',
+  'Hotel 1 Gwangalli Busan': '호텔1 광안리',
+  'Arte Museum Busan': '아르떼뮤지엄 부산',
+  'Huinnyeoul Culture Village Busan': '흰여울문화마을',
+  'Taejongdae Busan': '태종대',
+  'Spa Land Centum City Busan': '스파랜드 센텀시티',
+  'Shinsegae Centum City Busan': '신세계백화점 센텀시티점',
+  'Busan Museum of Art': '부산시립미술관',
+  'Haeundae Beach Busan': '해운대해수욕장',
+  'Haeundae Traditional Market Busan': '해운대전통시장',
+  'Haeundae Milmyeon Busan': '해운대 밀면',
+  'Haeundae Daegutang Busan': '해운대 대구탕',
+  'DIART Coffee Cheongsapo Busan': '디아트커피 청사포',
+  'Haeundae Blue Line Park Mipo Station': '해운대 블루라인파크 미포정거장',
+  'Haeundae Blue Line Park Cheongsapo Station': '해운대 블루라인파크 청사포정거장',
+  'Cheongsapo Daritdol Observatory Busan': '청사포 다릿돌전망대',
+  'Cheongsapo Grilled Shellfish Street Busan': '청사포 조개구이',
+  'Songjeong Beach Busan': '송정해수욕장',
+  'Haedong Yonggungsa Temple Busan': '해동용궁사',
+  'Skyline Luge Busan': '스카이라인루지 부산',
+  'Gijang Market Busan': '기장시장',
+  'Lotte Premium Outlets Dongbusan': '롯데프리미엄아울렛 동부산점',
+  'Lotte World Adventure Busan': '롯데월드 어드벤처 부산',
+  'Samjin Amook Busan Station': '삼진어묵 부산역',
+  'Beomeosa Temple Busan': '범어사'
+};

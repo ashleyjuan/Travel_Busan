@@ -6,6 +6,15 @@
     return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(dest) + '&travelmode=transit';
   }
 
+  function naverName(dest) {
+    var places = window.NAVER_PLACES || {};
+    return places[dest] || '';
+  }
+
+  function naverUrl(name) {
+    return 'https://map.naver.com/p/search/' + encodeURIComponent(name);
+  }
+
   function checkKey(key) { return 'busan-check-' + key; }
 
   function isDone(key) {
@@ -18,7 +27,11 @@
 
   function linkBtns(item) {
     var links = [];
-    if (item.map) links.push('<a class="btn btn-map" href="' + mapsUrl(item.map) + '" target="_blank" rel="noopener">導航</a>');
+    if (item.map) {
+      links.push('<a class="btn btn-map" href="' + mapsUrl(item.map) + '" target="_blank" rel="noopener">Google 導航</a>');
+      var kr = naverName(item.map);
+      if (kr) links.push('<a class="btn btn-naver" href="' + naverUrl(kr) + '" target="_blank" rel="noopener" title="' + kr + '">Naver 導航</a>');
+    }
     if (item.book) links.push('<a class="btn btn-book" href="' + item.book.url + '" target="_blank" rel="noopener">' + item.book.label + '</a>');
     if (item.link) links.push('<a class="btn btn-book" href="' + item.link.url + '" target="_blank" rel="noopener">' + item.link.label + '</a>');
     if (item.links) {

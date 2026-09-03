@@ -513,6 +513,11 @@ th {
 }
 .btn-map { background: var(--deep); color: #fff; }
 .btn-map:hover { background: var(--sea); }
+.btn-naver {
+  background: #03c75a;
+  color: #fff;
+}
+.btn-naver:hover { background: #02a94c; }
 .btn-book {
   background: #fff;
   color: var(--coral);
@@ -589,7 +594,7 @@ footer {
 }
 
 @media print {
-  .topnav, #day-nav, .widgets, .btn-map, .toggle-btn { display: none; }
+  .topnav, #day-nav, .widgets, .btn-map, .btn-naver, .toggle-btn { display: none; }
   .hero { min-height: auto; color: #000; background: none; padding: 20px 0; }
   .pane { display: block !important; }
   .day-card { break-inside: avoid; box-shadow: none; }
