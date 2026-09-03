@@ -739,3 +739,81 @@ footer {
   .pane { display: block !important; }
   .day-card { break-inside: avoid; box-shadow: none; }
 }
+
+/* 釜山Pass 標示與專區 */
+.pass-flag {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 0 8px 8px 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+.pass-flag strong {
+  display: block;
+  font-size: 12px;
+  letter-spacing: .04em;
+  margin-bottom: 2px;
+}
+.pass-flag.pass-purple,
+.pass-flag.pass-alt {
+  background: var(--violet-soft);
+  border-left: 4px solid var(--violet);
+  color: #45406b;
+}
+.pass-flag.pass-purple strong,
+.pass-flag.pass-alt strong { color: var(--violet); }
+.pass-flag.pass-blue {
+  background: #eef4f9;
+  border-left: 4px solid var(--rain);
+  color: #2f556e;
+}
+.pass-flag.pass-blue strong { color: var(--rain); }
+.pass-flag.pass-none {
+  background: var(--coral-soft);
+  border-left: 4px solid var(--coral);
+  color: #7a3024;
+}
+.pass-flag.pass-none strong { color: var(--coral); }
+
+.pass-picks {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+}
+.pass-pick {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+.pass-pick .pass-slot {
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  border-radius: 6px;
+  padding: 3px 0;
+  text-align: center;
+  height: fit-content;
+}
+.pass-pick.pass-purple .pass-slot { background: var(--violet); }
+.pass-pick.pass-blue .pass-slot { background: var(--rain); }
+.pass-pick-body h4 { font-size: 16px; color: var(--deep); line-height: 1.45; }
+.pass-pick-body p { font-size: 14px; margin-top: 6px; color: var(--soft-ink); }
+.pass-saving {
+  margin-top: 14px;
+  padding: 10px 13px;
+  background: var(--foam);
+  border: 1px solid rgba(15,111,128,.28);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--sea);
+}
+#pass-body ul { padding-left: 18px; margin-top: 6px; }
+#pass-body ul li { font-size: 14px; color: var(--soft-ink); margin: 6px 0; }
+
+@media (max-width: 560px) {
+  .pass-pick { grid-template-columns: 1fr; gap: 6px; }
+  .pass-pick .pass-slot { justify-self: start; padding: 3px 12px; }
+}

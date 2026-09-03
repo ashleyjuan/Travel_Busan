@@ -24,7 +24,7 @@ window.TRIP = {
       spots: [
         { time: '09:00', name: '甘川洞文化村', en: 'Gamcheon Culture Village', desc: '彩色山城、壁畫巷、小王子拍照點。早點抵達比較不曬也避開人潮，買蓋章地圖慢慢走。', price: '免費', duration: '2.5 小時', station: '土城站轉小巴', map: 'Gamcheon Culture Village Busan' },
         { time: '12:00', name: '甘川洞午餐或咖啡', en: 'Village Cafe', desc: '村內有展望咖啡與簡餐，但選擇不如南浦多；若大家餓得快，就先簡單吃再移動。', price: '₩8,000-18,000／人', map: 'Gamcheon Culture Village Cafe' },
-        { time: '13:30', name: '松島天空步道・海上纜車', en: 'Songdo Marine Cable Car', desc: '先走松島天空步道，再搭海上纜車到松島天空公園。想看腳下海面就選透明地板 Crystal Cruise。', price: '依車廂票種', duration: '2 小時', station: '建議短程叫車', map: 'Songdo Marine Cable Car Busan', book: { label: '官方資訊', url: 'https://www.busanaircruise.co.kr/' } },
+        { time: '13:30', name: '松島天空步道・海上纜車', en: 'Songdo Marine Cable Car', desc: '先走松島天空步道，再搭海上纜車到松島天空公園。想看腳下海面就選透明地板 Crystal Cruise。', price: '依車廂票種', duration: '2 小時', station: '建議短程叫車', map: 'Songdo Marine Cable Car Busan', pass: { tier: 'blue', text: '藍色景點・原價來回 ₩24,000（Pass 直接給水晶車廂，不用補差價）。現場售票口出示 Pass 兌換來回票。' }, book: { label: '官方資訊', url: 'https://www.busanaircruise.co.kr/' } },
         { time: '16:30', name: 'BIFF 廣場・國際市場・札嘎其市場', en: 'Nampo Markets', desc: '回南浦洞吃堅果糖餅、忠武飯捲、魚板、辣炒年糕。想吃海鮮可在札嘎其市場提早晚餐。', price: '小吃 ₩3,000 起', duration: '2 小時', map: 'BIFF Square Busan' },
         { time: '19:00', name: '廣安里 M Drone Light Show', en: 'Gwangalli Beach', desc: '2026/10/3 是週六，廣安里固定週六晚間展演；10 月場次常見 19:00、21:00，仍以當天公告為準。', price: '免費', duration: '1 小時', station: '地鐵 2 號線', map: 'Gwangalli Beach Busan' }
       ],
@@ -43,10 +43,10 @@ window.TRIP = {
       transport: '換宿日建議用叫車處理行李。廣安里飯店 → 影島 ARTE MUSEUM → 回廣安里入住 → Centum City Spa Land，動線雖有跨區，但都適合用短程叫車或地鐵銜接。',
       spots: [
         { time: '10:00', name: '退房與行李轉場', en: 'Move to Gwangalli', desc: 'Gem Stay Seomyeon 退房 09:00-11:00。先把行李送到廣安里飯店寄放，避免拖行李去影島。', duration: '1 小時', map: 'Hotel 1 Gwangalli Busan' },
-        { time: '12:00', name: 'ARTE MUSEUM 釜山', en: 'Arte Museum Busan', desc: '影島沉浸式數位藝術館，以海洋、自然、光影空間為主，換宿日排室內很剛好。', price: '依官網票價', hours: '常見 10:00-20:00', duration: '2 小時', station: '影島', map: 'Arte Museum Busan', book: { label: '官網資訊', url: 'https://artemuseum.com/busan' } },
+        { time: '12:00', name: 'ARTE MUSEUM 釜山', en: 'Arte Museum Busan', desc: '影島沉浸式數位藝術館，以海洋、自然、光影空間為主，換宿日排室內很剛好。', price: '依官網票價', hours: '常見 10:00-20:00', duration: '2 小時', station: '影島', map: 'Arte Museum Busan', pass: { tier: 'blue', text: '藍色景點・原價 ₩22,000。換宿日排這裡，用 Pass 免排隊買票。' }, book: { label: '官網資訊', url: 'https://artemuseum.com/busan' } },
         { time: '15:00', name: '白淺灘文化村短停', en: 'Huinnyeoul Culture Village', desc: '如果大家還有精神，可順路看海崖村與咖啡店；若累了就跳過，直接回飯店。', price: '免費', duration: '1 小時', map: 'Huinnyeoul Culture Village Busan' },
         { time: '16:00', name: '入住光州里1號酒店', en: 'Hotel 1 Gwangalli', desc: '完成入住、整理行李，換輕便衣物前往 Centum City。', map: 'Hotel 1 Gwangalli Busan' },
-        { time: '18:00', name: '新世界 Centum City・Spa Land', en: 'Spa Land Centum City', desc: '高級韓式汗蒸幕，溫泉池、汗蒸房與休息區都在新世界百貨內。很適合修復前兩天的步行量。', price: '依現場／平台票價', hours: '常見 09:00-22:00', duration: '3-4 小時', station: 'Centum City 站', map: 'Spa Land Centum City Busan' }
+        { time: '18:00', name: '新世界 Centum City・Spa Land', en: 'Spa Land Centum City', desc: '高級韓式汗蒸幕，溫泉池、汗蒸房與休息區都在新世界百貨內。很適合修復前兩天的步行量。', price: '依現場／平台票價', hours: '常見 09:00-22:00', duration: '3-4 小時', station: 'Centum City 站', map: 'Spa Land Centum City Busan', pass: { tier: 'purple', text: '紫色景點・原價 ₩26,000（4 小時制）。這是 Big5 兩個紫色名額之一，週日人多，進場前先確認排隊狀況。' } }
       ],
       rainNote: '今天本來就是雨天友善行程：ARTE MUSEUM 與 Spa Land 都是室內，白淺灘可直接刪掉。',
       dayTips: ['Spa Land 多為 4 小時制，泡湯前後記得補水。', '進汗蒸幕不需要帶太多東西，貴重物品照現場置物櫃規則處理。']
@@ -59,10 +59,10 @@ window.TRIP = {
       spots: [
         { time: '09:30', name: '海雲台海水浴場・冬柏島', en: 'Haeundae Beach / Dongbaekseom', desc: '先走沙灘與冬柏島，APEC 世峰樓、燈塔、海雲台天際線都很順。', price: '免費', duration: '2 小時', station: '海雲台站', map: 'Haeundae Beach Busan' },
         { time: '11:30', name: 'DIART COFFEE・土耳其蜂蜜奶油麵包', en: 'DIART Coffee', desc: '清沙埔人氣咖啡店，招牌 Kaymak 風格蜂蜜奶油麵包建議早點吃，下午可能售完。', price: '依店內消費', duration: '1 小時', map: 'DIART Coffee Cheongsapo Busan' },
-        { time: '13:30', name: '天空膠囊列車', en: 'Haeundae Sky Capsule', desc: '復古小車廂沿海慢慢前進，是這趟釜山最有代表性的畫面。建議預約尾浦 → 清沙埔方向。', price: '依車廂票種', duration: '35 分鐘', station: '尾浦站／清沙埔站', map: 'Haeundae Blue Line Park Mipo Station', book: { label: 'Blue Line Park', url: 'https://www.bluelinepark.com/' } },
+        { time: '13:30', name: '天空膠囊列車', en: 'Haeundae Sky Capsule', desc: '復古小車廂沿海慢慢前進，是這趟釜山最有代表性的畫面。建議預約尾浦 → 清沙埔方向。', price: '依車廂票種', duration: '35 分鐘', station: '尾浦站／清沙埔站', map: 'Haeundae Blue Line Park Mipo Station', pass: { tier: 'none', text: '釜山Pass 不含天空膠囊列車，必須另外線上預約付費。Pass 只能用在同一條線的「海岸列車」。' }, book: { label: 'Blue Line Park', url: 'https://www.bluelinepark.com/' } },
         { time: '15:00', name: '清沙埔紅白燈塔・踏石展望台', en: 'Cheongsapo', desc: '小漁港、燈塔、海上展望台與鐵道海景都集中，適合慢慢拍照等日落。', price: '免費', duration: '2 小時', map: 'Cheongsapo Daritdol Observatory Busan' },
         { time: '18:00', name: '清沙埔烤貝晚餐', en: 'Grilled Shellfish', desc: '清沙埔烤貝一條街，兩人一份套餐通常份量很夠。', price: '依套餐與時價', duration: '1.5 小時', map: 'Cheongsapo Grilled Shellfish Street Busan' },
-        { time: '20:00', name: '海岸列車回尾浦', en: 'Beach Train', desc: '回程搭海岸列車，用不同高度再看一次海岸線；回尾浦後轉車回廣安里。', price: '依票種', duration: '30 分鐘', map: 'Haeundae Blue Line Park Cheongsapo Station' }
+        { time: '20:00', name: '海岸列車回尾浦', en: 'Beach Train', desc: '回程搭海岸列車，用不同高度再看一次海岸線；回尾浦後轉車回廣安里。', price: '依票種', duration: '30 分鐘', map: 'Haeundae Blue Line Park Cheongsapo Station', pass: { tier: 'blue', text: '藍色景點・全站通票原價 ₩16,000。今天膠囊列車要自費，海岸列車才是 Pass 這一格。' } }
       ],
       rainNote: '若雨勢大或海邊風強，膠囊列車可以保留，戶外燈塔與展望台縮短，改去 Centum City 或海雲台市場。',
       rainSpots: [
@@ -79,7 +79,7 @@ window.TRIP = {
       transport: '廣安里出發往 Osiria／機張。龍宮寺、Skyline Luge、Outlet、樂天世界都在同一生活圈，適合排成一日線。',
       spots: [
         { time: '09:00', name: '海東龍宮寺', en: 'Haedong Yonggungsa Temple', desc: '建在海岸岩石上的寺廟，早上光線較好、人潮比較可控。階梯多，慢慢走。', price: '免費', duration: '1.5 小時', station: 'Osiria 轉公車／叫車', map: 'Haedong Yonggungsa Temple Busan' },
-        { time: '11:00', name: 'Skyline Luge Busan', en: 'Skyline Luge', desc: '搭纜椅上山，再自己操控滑車下坡。比樂園輕量，但非常有記憶點；不玩的人可在周邊咖啡或 Outlet 等。', price: '依趟數票種', hours: '常見 10:00-18:00', duration: '2 小時', station: 'Osiria', map: 'Skyline Luge Busan', book: { label: '官方資訊', url: 'https://busan.skylineluge.kr/en/' } },
+        { time: '11:00', name: 'Skyline Luge Busan', en: 'Skyline Luge', desc: '搭纜椅上山，再自己操控滑車下坡。比樂園輕量，但非常有記憶點；不玩的人可在周邊咖啡或 Outlet 等。', price: '依趟數票種', hours: '常見 10:00-18:00', duration: '2 小時', station: 'Osiria', map: 'Skyline Luge Busan', pass: { tier: 'purple', text: '紫色景點・Pass 可換滑車 2 趟或飛索 1 趟（原價約 ₩28,000-34,000）。這是 Big5 第二個紫色名額。' }, book: { label: '官方資訊', url: 'https://busan.skylineluge.kr/en/' } },
         { time: '13:30', name: '龍宮寺周邊午餐', en: 'Seafood Lunch', desc: '可吃海鮮麵疙瘩、魚板、簡單韓食；想吃雪蟹則改往機張市場，時間要多抓。', price: '₩12,000 起', duration: '1 小時', map: 'Gijang Market Busan' },
         { time: '15:00', name: '樂天 Premium Outlet 東釜山', en: 'Lotte Premium Outlets', desc: '購物、咖啡、超市採買都方便；若有人想玩樂天世界，可分組後約晚餐集合。', price: '自由消費', duration: '2.5 小時', map: 'Lotte Premium Outlets Dongbusan' },
         { time: '19:00', name: '回廣安里夜海與打包', en: 'Gwangalli Night', desc: '最後一晚留給廣安大橋夜景，順便整理行李、確認隔天機場交通。', duration: '1.5 小時', map: 'Gwangalli Beach Busan' }
@@ -87,7 +87,7 @@ window.TRIP = {
       rainNote: '若 Luge 因天候停駛，機張日改成龍宮寺短停 + Outlet + 樂天世界／咖啡店。',
       rainSpots: [
         { time: '10:30', name: '樂天 Premium Outlet 東釜山', en: 'Lotte Premium Outlets', desc: '有室內商店與餐飲，雨天比戶外 Luge 穩。', duration: '3 小時', map: 'Lotte Premium Outlets Dongbusan', book: { label: '營業資訊', url: 'https://global.lotteshopping.com/eng/store/main?cstrCd=0352' } },
-        { time: '14:30', name: '樂天世界釜山', en: 'Lotte World Adventure Busan', desc: '若同行者想玩樂園，可改以樂園為主；不玩的人繼續 Outlet。', price: '依票種', duration: '3 小時', map: 'Lotte World Adventure Busan', book: { label: '票價資訊', url: 'https://adventurebusan.lotteworld.com/price/price' } },
+        { time: '14:30', name: '樂天世界釜山', en: 'Lotte World Adventure Busan', desc: '若同行者想玩樂園，可改以樂園為主；不玩的人繼續 Outlet。', price: '依票種', duration: '3 小時', map: 'Lotte World Adventure Busan', pass: { tier: 'alt', text: '紫色景點・原價 ₩49,000，是紫色組裡最貴的。若 Luge 停駛改玩這裡，紫色名額直接換過來，還更划算。' }, book: { label: '票價資訊', url: 'https://adventurebusan.lotteworld.com/price/price' } },
         { time: '19:00', name: '廣安里晚餐', en: 'Dinner near Hotel', desc: '回住宿附近吃烤肉、炸雞或海景咖啡，行李也比較好整理。', map: 'Gwangalli Beach Busan' }
       ],
       dayTips: ['Luge 最後售票時間會早於關門，別排太晚。', '機張市場雪蟹是時價，入座前先確認總價與料理費。', '今天是最後完整日，別把晚上排太滿。']
@@ -110,10 +110,18 @@ window.TRIP = {
 
   bookings: [
     {
+      key: 'busan-pass', group: 'online', level: '最優先',
+      name: 'VISIT BUSAN PASS Big5', en: 'Visit Busan Pass',
+      day: '10/3、10/4、10/5、10/6 共 5 個景點', when: '出發前 2 週線上買',
+      desc: '₩65,000／人，任選 2 個紫色＋3 個藍色景點，這趟剛好整組用完（Spa Land、Skyline Luge、松島海上纜車、ARTE MUSEUM、海岸列車），原價合計約 ₩116,000-122,000，省下約 ₩51,000-57,000／人。線上買完拿兌換憑證，落地金海機場國際線旅遊諮詢中心換實體卡。',
+      fallback: '注意：天空膠囊列車不在 Pass 內，仍要另外訂票付費。',
+      book: { label: '官網景點清單', url: 'https://www.visitbusanpass.com/' }
+    },
+    {
       key: 'sky-capsule', group: 'online', level: '最優先',
       name: '天空膠囊列車 Sky Capsule', en: 'Haeundae Sky Capsule',
       day: '10/5（一）13:30', when: '越早越好',
-      desc: '這趟最該優先處理的一項。車廂人數固定、班次有限，熱門時段常提早數週售完。請訂「尾浦 → 清沙埔」單程，並一次抓齊同行人數，避免拆成兩個車廂。',
+      desc: '這趟最該優先處理的一項。車廂人數固定、班次有限，熱門時段常提早數週售完。請訂「尾浦 → 清沙埔」單程，並一次抓齊同行人數，避免拆成兩個車廂。<strong>釜山Pass 不含膠囊列車</strong>，這筆一定要另外付費。',
       fallback: '若膠囊列車沒票，海岸列車仍保留海線體驗，行程不用大改。',
       book: { label: 'Blue Line Park', url: 'https://www.bluelinepark.com/' }
     },
@@ -121,7 +129,7 @@ window.TRIP = {
       key: 'skyline-luge', group: 'online', level: '第二優先',
       name: 'Skyline Luge Busan', en: 'Skyline Luge',
       day: '10/6（二）11:00', when: '出發前 2 週',
-      desc: '依趟數計價，線上套票通常比現場便宜。先決定要玩幾趟，並確認不玩的人可否只買纜椅或在周邊等。',
+      desc: '已納入釜山Pass Big5（紫色名額 2），Pass 可換滑車 2 趟或飛索 1 趟。想玩更多趟再現場加購；不玩的人確認可否只買纜椅或在周邊等。',
       fallback: '天候不佳會停駛，出發前一天要再看官方公告；停駛就改 Outlet／樂天世界。',
       book: { label: '官方訂票', url: 'https://busan.skylineluge.kr/en/' }
     },
@@ -129,21 +137,21 @@ window.TRIP = {
       key: 'spa-land', group: 'online', level: '建議提前',
       name: 'Spa Land（新世界 Centum City）', en: 'Spa Land Centum City',
       day: '10/4（日）18:00', when: '出發前 1 週',
-      desc: '現場可買票，但 10/4 是週日、人潮多。多為 4 小時制，先決定入場時間再回推 ARTE MUSEUM 的離場時間。',
+      desc: '已納入釜山Pass Big5（紫色名額 1），到現場出示 Pass 兌換即可，不用另外買票。但 10/4 是週日、人潮多，多為 4 小時制，先決定入場時間再回推 ARTE MUSEUM 的離場時間。',
       book: { label: 'Spa Land 資訊', url: 'https://www.shinsegae.com/store/entertainment/centum-spaland.do?storeCd=SC00008' }
     },
     {
       key: 'arte-museum', group: 'online', level: '建議提前',
       name: 'ARTE MUSEUM 釜山', en: 'Arte Museum Busan',
       day: '10/4（日）12:00', when: '出發前 1 週',
-      desc: '線上預售常有折扣。10/4 是換宿日、時間卡得緊，先訂好時段比較不會被排隊吃掉行程。',
+      desc: '已納入釜山Pass Big5（藍色名額 1），現場出示 Pass 入場。10/4 是換宿日、時間卡得緊，先查好當日時段與人潮。',
       book: { label: '官網票價', url: 'https://artemuseum.com/busan' }
     },
     {
       key: 'songdo-cable', group: 'online', level: '建議提前',
       name: '松島海上纜車', en: 'Songdo Marine Cable Car',
       day: '10/3（六）13:30', when: '出發前 1 週',
-      desc: '10/3 是週六，現場排隊最久。想看腳下海面要指定透明地板 Crystal Cruise 車廂，票價與一般車廂不同。',
+      desc: '已納入釜山Pass Big5（藍色名額 2），而且 Pass 直接給透明地板 Crystal Cruise 來回票，不用補差價。10/3 是週六，現場排隊最久，早點到售票口兌換。',
       fallback: '強風可能暫停營運，當天出門前查一次；停駛就走南浦洞室內備案。',
       book: { label: '官網資訊', url: 'https://www.busanaircruise.co.kr/' }
     },
@@ -194,7 +202,39 @@ window.TRIP = {
     { id: 'dining', title: '餐飲類', note: '不一定要訂，但要先決定策略與預算。' },
     { id: 'confirm', title: '已訂・出發前再確認一次', note: '訂單存離線截圖，並確認行李與寄放細節。' }
   ],
-  bookingFree: '免預約：甘川洞文化村、南浦洞市場群、海東龍宮寺、清沙埔燈塔與展望台、廣安里無人機秀（免費，但 10/3 場次時間要看當天公告）。雨天備案的國際市場、樂天百貨光復店、西面地下街也都免預約；只有備案中的樂天世界釜山若真的要去，線上票較便宜。',
+  bookingFree: '免預約：甘川洞文化村、南浦洞市場群、海東龍宮寺、清沙埔燈塔與展望台、廣安里無人機秀（免費，但 10/3 場次時間要看當天公告）。雨天備案的國際市場、樂天百貨光復店、西面地下街也都免預約；只有備案中的樂天世界釜山若真的要去，線上票較便宜（也可直接用釜山Pass 的紫色名額換）。',
+
+  busanPass: {
+    name: 'VISIT BUSAN PASS Big5',
+    price: '₩65,000／人',
+    rule: '任選 2 個紫色（高單價）景點 ＋ 3 個藍色景點，共 5 個。',
+    validity: '購買後 1 年內啟用；首次使用起 180 天內用完。這趟 10/3–10/6 四天就會全部用掉。',
+    redeem: '線上（官網或 Klook／KKday）買好憑證，10/2 落地後在金海機場國際線旅遊諮詢中心換實體卡。實體卡可以加值當交通卡搭地鐵與公車，等於少帶一張 T-money。',
+    saving: '原價合計約 ₩116,000–122,000／人，用 Pass 只花 ₩65,000，省下約 ₩51,000–57,000／人。',
+    picks: [
+      { tier: 'purple', slot: '紫色 1', day: '10/4（日）18:00', name: 'Spa Land Centum City', price: '原價 ₩26,000', note: '4 小時制。換宿日晚上泡湯，出示 Pass 直接入場。' },
+      { tier: 'purple', slot: '紫色 2', day: '10/6（二）11:00', name: 'Skyline Luge Busan', price: '原價 ₩28,000–34,000', note: 'Pass 可換滑車 2 趟或飛索 1 趟；想多滑幾趟現場加購。' },
+      { tier: 'blue', slot: '藍色 1', day: '10/3（六）13:30', name: '松島海上纜車', price: '原價 ₩24,000', note: 'Pass 直接給透明地板 Crystal Cruise 來回票，不用補差價。' },
+      { tier: 'blue', slot: '藍色 2', day: '10/4（日）12:00', name: 'ARTE MUSEUM 釜山', price: '原價 ₩22,000', note: '影島沉浸式展館，現場出示 Pass 入場。' },
+      { tier: 'blue', slot: '藍色 3', day: '10/5（一）20:00', name: '海雲台海岸列車 Beach Train', price: '原價 ₩16,000', note: '全站通票。清沙埔吃完烤貝搭回尾浦剛好用這一格。' }
+    ],
+    excluded: [
+      '<strong>天空膠囊列車 Sky Capsule（10/5 13:30）不在 Pass 內</strong>，一定要另外線上預約付費。同一條藍線公園裡，只有「海岸列車」可以用 Pass。',
+      '甘川洞文化村、南浦洞市場群、海東龍宮寺、清沙埔燈塔與展望台、廣安里無人機秀本來就免費，不用也不能佔名額。',
+      '樂天 Premium Outlet、機張市場、清沙埔烤貝、DIART COFFEE 屬於購物與餐飲，Pass 只有部分店家折扣，不是免費入場。'
+    ],
+    swaps: [
+      '樂天世界釜山（紫色・原價 ₩49,000）：10/6 若 Luge 因天候停駛，紫色名額直接換到這裡，反而更划算。',
+      '釜山塔（藍色・原價 ₩12,000）：10/3 南浦洞晚上加碼，藍色名額有剩可以補這裡。',
+      '太宗台 Danubi 列車（藍色・原價 ₩4,000）：單價太低，不建議用掉名額。'
+    ],
+    tips: [
+      '買之前上官網對一次最新景點清單與紫／藍分組，每年都會調整（ARTE MUSEUM 就曾經從紫色改成藍色）。',
+      '一個景點只能入場一次，用掉就扣一格，進場前先確認今天真的要玩。',
+      '兌換憑證存離線截圖；同行者每人都要一張 Pass，票券不能共用。'
+    ],
+    link: { label: '官網景點清單', url: 'https://www.visitbusanpass.com/' }
+  },
 
   prepGroups: [
     {
@@ -212,7 +252,9 @@ window.TRIP = {
       items: [
         { key: 'krw-cash', text: '先換一部分韓元現金：市場小吃、烤貝店、機張雪蟹常偏好現金。' },
         { key: 'card', text: '準備一張免海外手續費的信用卡，並開通海外交易與確認額度。' },
-        { key: 'transit-card', text: 'T-money 或 Cashbee：抵達金海機場先買或加值（10/2 行程已排）。' },
+        { key: 'busan-pass-buy', text: '購買 VISIT BUSAN PASS Big5（₩65,000／人）：本趟 Spa Land、Skyline Luge、松島海上纜車、ARTE MUSEUM、海岸列車剛好用滿 2 紫＋3 藍，省約 ₩51,000-57,000／人。線上買好憑證，10/2 落地在金海機場國際線旅遊諮詢中心換實體卡。', link: { label: '官網／景點清單', url: 'https://www.visitbusanpass.com/' } },
+        { key: 'busan-pass-check', text: '買 Pass 前先上官網對一次景點清單與分組（紫／藍每年會調整），並確認天空膠囊列車仍不在其中，那筆要另外訂。' },
+        { key: 'transit-card', text: 'T-money 或 Cashbee：抵達金海機場先買或加值（10/2 行程已排）。釜山Pass 實體卡本身也能加值當交通卡用，可以少買一張。' },
         { key: 'tax-refund', text: '了解退稅門檻與機場退稅流程，10/7 上機前要處理完。' }
       ]
     },
@@ -246,6 +288,7 @@ window.TRIP = {
         { key: 'drone-show', text: '廣安里 10/3 無人機秀當日場次公告（常見 19:00、21:00）。' },
         { key: 'luge-hours', text: 'Skyline Luge 最後售票時間（會早於關門），別把機張日排太晚。', link: { label: '官方公告', url: 'https://busan.skylineluge.kr/en/' } },
         { key: 'museum', text: '釜山市立美術館是否開放（10/5 雨天備案要用）。', link: { label: '美術館公告', url: 'https://art.busan.go.kr/eng/index.nm' } },
+        { key: 'pass-ready', text: '釜山Pass 兌換憑證截圖存離線，並確認金海機場國際線旅遊諮詢中心的營業時間涵蓋 10/2 17:05 落地後。' },
         { key: 'weather', text: '看一次 6 天天氣，決定 10/3 與 10/5 走主方案還是雨天備案。' }
       ]
     }
@@ -271,8 +314,8 @@ window.TRIP = {
     { name: '西面地下街', desc: '住西面前兩晚的備案，適合美妝、服飾與簡單晚餐。', map: 'Seomyeon Underground Shopping Center Busan', book: { label: '營業資訊', url: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=70895' } }
   ],
   pocketExtra: [
-    { name: '太宗台', desc: '影島海崖公園與燈塔，若 10/4 體力好可替代白淺灘或加碼。', map: 'Taejongdae Busan', book: { label: '園區資訊', url: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=110962' } },
-    { name: '釜山塔・龍頭山公園', desc: '南浦洞晚上加碼夜景，適合 10/3 市場後視體力決定。', map: 'Busan Tower', book: { label: '票價資訊', url: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=84864' } },
+    { name: '太宗台', desc: '影島海崖公園與燈塔，若 10/4 體力好可替代白淺灘或加碼。園區內的 Danubi 列車是釜山Pass 藍色景點（原價 ₩4,000），但單價低，不建議用掉名額。', map: 'Taejongdae Busan', book: { label: '園區資訊', url: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=110962' } },
+    { name: '釜山塔・龍頭山公園', desc: '南浦洞晚上加碼夜景，適合 10/3 市場後視體力決定。釜山塔是釜山Pass 藍色景點（原價 ₩12,000），若某個藍色名額用不掉可以補在這裡。', map: 'Busan Tower', book: { label: '票價資訊', url: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=84864' } },
     { name: '松亭海水浴場', desc: 'Blue Line Park 沿線可停靠，時間多可從清沙埔延伸過去。', map: 'Songjeong Beach Busan', book: { label: '海灘資訊', url: 'https://www.visitbusan.net/en/index.do?lang_cd=en&menuCd=DOM_000000301001001000&uc_seq=280' } },
     { name: '梵魚寺', desc: '想加入山寺氣氛可替換半天，但此趟天數較短，列為備選。', map: 'Beomeosa Temple Busan', book: { label: '寺院資訊', url: 'https://www.beomeo.kr/eng/sub1.php' } }
   ]

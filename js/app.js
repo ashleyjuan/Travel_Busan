@@ -42,6 +42,20 @@
     return links.length ? '<div class="spot-links">' + links.join('') + '</div>' : '';
   }
 
+  var PASS_LABEL = {
+    purple: '釜山Pass Big5・紫色名額',
+    blue: '釜山Pass Big5・藍色名額',
+    alt: '釜山Pass Big5・可替換名額',
+    none: '釜山Pass 不適用'
+  };
+
+  function passHtml(pass) {
+    if (!pass) return '';
+    return '<div class="pass-flag pass-' + pass.tier + '">' +
+      '<strong>' + (PASS_LABEL[pass.tier] || '釜山Pass') + '</strong>' + pass.text +
+    '</div>';
+  }
+
   function spotHtml(s) {
     var meta = [];
     if (s.price) meta.push('<span class="meta">費用 ' + s.price + '</span>');
@@ -56,6 +70,7 @@
       '<div class="spot-body">' +
         '<h4>' + s.name + (s.en ? ' <span class="en">' + s.en + '</span>' : '') + '</h4>' +
         '<p>' + s.desc + '</p>' +
+        passHtml(s.pass) +
         (s.warn ? '<div class="spot-warn"><strong>注意事項</strong><ul>' + s.warn.map(function (w) { return '<li>' + w + '</li>'; }).join('') + '</ul></div>' : '') +
         (s.tips ? '<p class="spot-tip">' + s.tips + '</p>' : '') +
         (meta.length ? '<div class="spot-meta">' + meta.join('') + '</div>' : '') +
@@ -198,6 +213,48 @@
         }).join('') + '</ul>' +
       '</div>';
     }).join('');
+  }
+
+  function renderBusanPass() {
+    var el = document.getElementById('pass-body');
+    var p = window.TRIP.busanPass;
+    if (!el || !p) return;
+
+    var facts = [
+      ['票種', p.name + '　' + p.price],
+      ['規則', p.rule],
+      ['效期', p.validity],
+      ['兌換', p.redeem]
+    ].map(function (row) {
+      return '<tr><th>' + row[0] + '</th><td>' + row[1] + '</td></tr>';
+    }).join('');
+
+    var picks = p.picks.map(function (k) {
+      return '<li class="pass-pick pass-' + k.tier + '">' +
+        '<div class="pass-slot">' + k.slot + '</div>' +
+        '<div class="pass-pick-body">' +
+          '<h4>' + k.name + '</h4>' +
+          '<div class="spot-meta"><span class="meta">行程 ' + k.day + '</span><span class="meta">' + k.price + '</span></div>' +
+          '<p>' + k.note + '</p>' +
+        '</div>' +
+      '</li>';
+    }).join('');
+
+    function bullets(list) {
+      return '<ul>' + list.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>';
+    }
+
+    el.innerHTML =
+      '<div class="card highlight">' +
+        '<h3>這趟怎麼用滿 Big5</h3>' +
+        '<div class="table-wrap"><table>' + facts + '</table></div>' +
+        '<ol class="pass-picks">' + picks + '</ol>' +
+        '<p class="pass-saving">' + p.saving + '</p>' +
+        linkBtns(p) +
+      '</div>' +
+      '<div class="card"><h3>不能用 Pass 的部分</h3>' + bullets(p.excluded) + '</div>' +
+      '<div class="card"><h3>名額用不完或行程有變時</h3>' + bullets(p.swaps) + '</div>' +
+      '<div class="card"><h3>使用提醒</h3>' + bullets(p.tips) + '</div>';
   }
 
   function progressTag(id) {
@@ -410,6 +467,7 @@
     renderDays();
     renderBookings();
     renderPrep();
+    renderBusanPass();
     attachChecks(document);
     attachResets();
     renderCollection('food-featured', window.TRIP.foodFeatured);
