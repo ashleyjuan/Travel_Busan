@@ -242,7 +242,6 @@
       btn.addEventListener('click', function () {
         var scope = document.getElementById(btn.dataset.target);
         if (!scope) return;
-        if (!window.confirm('要清除這一區所有勾選記錄嗎？')) return;
         scope.querySelectorAll('.chk-row[data-key]').forEach(function (row) {
           var input = row.querySelector('.chk');
           if (input) input.checked = false;
@@ -313,81 +312,96 @@
     var el = document.getElementById('fx-widget');
     if (!el) return;
     var fallbackRate = 0.0235;
+    var quickAmounts = [1000, 5000, 10000, 50000];
     var els = {};
 
-    function money(value, currency) {
-      return new Intl.NumberFormat('zh-TW', {
-        style: 'currency',
-        currency: currency,
-        maximumFractionDigits: currency === 'KRW' ? 0 : 0
-      }).format(value || 0);
-    }
-
-    function renderSummary(krw, twd) {
-      els.summary.innerHTML = '<strong>' + money(krw, 'KRW') + '</strong>' +
-        '<span class="fx-eq">\u2248</span>' +
-        '<strong>' + money(twd, 'TWD') + '</strong>';
+    function group(value) {
+      return String(Math.round(value || 0)).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
 
     function updateFromKrw() {
       var krw = Number(els.krw.value) || 0;
       var rate = Number(els.rate.value) || fallbackRate;
       els.twd.value = Math.round(krw * rate);
-      renderSummary(krw, krw * rate);
+      syncChips(krw);
     }
 
     function updateFromTwd() {
       var twd = Number(els.twd.value) || 0;
       var rate = Number(els.rate.value) || fallbackRate;
-      var krw = rate ? Math.round(twd / rate) : 0;
-      els.krw.value = krw;
-      renderSummary(krw, twd);
+      els.krw.value = rate ? Math.round(twd / rate) : 0;
+      syncChips(Number(els.krw.value));
+    }
+
+    function syncChips(krw) {
+      var rate = Number(els.rate.value) || fallbackRate;
+      for (var i = 0; i < els.chips.length; i++) {
+        var amount = Number(els.chips[i].dataset.krw);
+        els.chips[i].lastChild.textContent = 'NT$' + group(amount * rate);
+        var on = amount === krw;
+        els.chips[i].classList.toggle('is-on', on);
+        els.chips[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+      }
     }
 
     function setRate(rate, label) {
       els.rate.value = rate.toFixed(5);
-      els.rateLabel.textContent = label + '　₩1,000 ≈ NT$' + (rate * 1000).toFixed(1);
+      els.rateLabel.textContent = label + ' ₩1,000 ≈ NT$' + (rate * 1000).toFixed(1);
       updateFromKrw();
+    }
+
+    var chipHtml = '';
+    for (var i = 0; i < quickAmounts.length; i++) {
+      chipHtml += '<button type="button" class="fx-chip" data-krw="' + quickAmounts[i] +
+        '" aria-pressed="false"><span class="fx-chip-krw">₩' + group(quickAmounts[i]) +
+        '</span><span class="fx-chip-twd">NT$0</span></button>';
     }
 
     el.innerHTML =
       '<div class="fx-head">' +
         '<span class="fx-title">匯率計算器</span>' +
-        '<span class="fx-badge" id="fx-rate-label">估算匯率載入中...</span>' +
+        '<span class="fx-badge" id="fx-rate-label">載入中</span>' +
       '</div>' +
       '<div class="fx-calc" aria-label="韓元台幣匯率計算器">' +
         '<label class="fx-field">' +
           '<span class="fx-name">韓元 KRW</span>' +
-          '<span class="fx-input"><span class="fx-sym">\u20a9</span><input id="fx-krw" type="number" inputmode="decimal" min="0" step="1000" value="10000"></span>' +
+          '<span class="fx-input"><span class="fx-sym">₩</span><input id="fx-krw" type="number" inputmode="decimal" min="0" step="1000" value="10000"></span>' +
         '</label>' +
-        '<span class="fx-swap" aria-hidden="true">\u21c4</span>' +
+        '<span class="fx-swap" aria-hidden="true">⇄</span>' +
         '<label class="fx-field">' +
           '<span class="fx-name">台幣 TWD</span>' +
           '<span class="fx-input"><span class="fx-sym">NT$</span><input id="fx-twd" type="number" inputmode="decimal" min="0" step="10"></span>' +
         '</label>' +
       '</div>' +
-      '<div class="fx-summary" id="fx-summary"></div>' +
-      '<label class="fx-rate-row">' +
-        '<span>自訂匯率</span>' +
-        '<input id="fx-rate" type="number" inputmode="decimal" min="0" step="0.0001">' +
-      '</label>';
+      '<div class="fx-quick">' +
+        '<span class="fx-quick-label">常見金額</span>' +
+        '<div class="fx-chips">' + chipHtml + '</div>' +
+      '</div>' +
+      '<label class="fx-rate-row"><span>自訂匯率</span>' +
+        '<input id="fx-rate" type="number" inputmode="decimal" min="0" step="0.0001"></label>';
 
     els.krw = document.getElementById('fx-krw');
     els.twd = document.getElementById('fx-twd');
     els.rate = document.getElementById('fx-rate');
-    els.summary = document.getElementById('fx-summary');
     els.rateLabel = document.getElementById('fx-rate-label');
+    els.chips = el.querySelectorAll('.fx-chip');
 
     els.krw.addEventListener('input', updateFromKrw);
     els.twd.addEventListener('input', updateFromTwd);
     els.rate.addEventListener('input', updateFromKrw);
-    setRate(fallbackRate, '估算匯率');
+    for (var j = 0; j < els.chips.length; j++) {
+      els.chips[j].addEventListener('click', function () {
+        els.krw.value = this.dataset.krw;
+        updateFromKrw();
+      });
+    }
+    setRate(fallbackRate, '估算');
 
     fetch('https://open.er-api.com/v6/latest/KRW').then(function (r) { return r.json(); }).then(function (data) {
       if (!data.rates || !data.rates.TWD) throw new Error('no rate');
-      setRate(data.rates.TWD, '即時匯率');
+      setRate(data.rates.TWD, '即時');
     }).catch(function () {
-      els.rateLabel.textContent = '離線估算　₩1,000 ≈ NT$23.5';
+      els.rateLabel.textContent = '離線估算 ₩1,000 ≈ NT$23.5';
     });
   }
 
